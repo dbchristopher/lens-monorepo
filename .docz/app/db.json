@@ -1,0 +1,73 @@
+{
+  "config": {
+    "title": "Root",
+    "description": "My awesome app using docz",
+    "menu": [
+      "Getting Started",
+      "Components"
+    ],
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-",
+    "typescript": true,
+    "files": "packages/styleguide/**/*.{md,markdown,mdx}"
+  },
+  "entries": [
+    {
+      "key": "packages/styleguide/index.mdx",
+      "value": {
+        "name": "Hello world",
+        "route": "/",
+        "id": "5db1ac74d0c8b50bd08930895b19a60a",
+        "filepath": "packages/styleguide/index.mdx",
+        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/index.mdx",
+        "link": "",
+        "slug": "packages-styleguide-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "hello-world",
+            "depth": 1,
+            "value": "Hello world"
+          }
+        ]
+      }
+    }
+  ],
+  "props": [
+    {
+      "key": "packages/apps/app-one/src/App.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "App",
+          "methods": [],
+          "actualName": "App"
+        }
+      ]
+    },
+    {
+      "key": "packages/components/src/CompOne/CompOne.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CompOne",
+          "methods": [],
+          "actualName": "CompOne"
+        }
+      ]
+    },
+    {
+      "key": "packages/components/src/CompTwo/CompTwo.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CompTwo",
+          "methods": [],
+          "actualName": "CompTwo"
+        }
+      ]
+    }
+  ]
+}
