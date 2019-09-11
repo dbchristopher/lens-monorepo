@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface LinkProps {
-  id: 'string';
+interface LinkProps {
+  children: React.ReactNode;
+  id: string;
 }
 
-/** @component */
-export const Link = styled.a``;
+const Link = styled.a``;
+
+export default Link;
