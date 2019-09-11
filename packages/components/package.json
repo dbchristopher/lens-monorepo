@@ -1,5 +1,5 @@
 {
-  "name": "@project/components",
+  "name": "looker-lens-components",
   "version": "1.0.0",
   "main": "src/index.ts",
   "main:src": "src/index.ts",

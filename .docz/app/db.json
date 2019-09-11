@@ -35,26 +35,6 @@
       }
     },
     {
-      "key": "packages/styleguide/components/CompOne.mdx",
-      "value": {
-        "name": "Component One",
-        "menu": "Components",
-        "id": "5f35de1bada25ec70e4b1b431dddb0fe",
-        "filepath": "packages/styleguide/components/CompOne.mdx",
-        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/components/CompOne.mdx",
-        "link": "",
-        "slug": "packages-styleguide-components-comp-one",
-        "route": "/packages-styleguide-components-comp-one",
-        "headings": [
-          {
-            "slug": "comp-one",
-            "depth": 1,
-            "value": "Comp One"
-          }
-        ]
-      }
-    },
-    {
       "key": "packages/styleguide/components/Link.mdx",
       "value": {
         "name": "Link",
@@ -97,6 +77,10 @@
   ],
   "props": [
     {
+      "key": "packages/components/src/Link/Link.tsx",
+      "value": []
+    },
+    {
       "key": "packages/apps/app-one/src/App.tsx",
       "value": [
         {
@@ -108,14 +92,6 @@
       ]
     },
     {
-      "key": "packages/components/src/CompOne/CompOne.tsx",
-      "value": []
-    },
-    {
-      "key": "packages/components/src/Link/Link.tsx",
-      "value": []
-    },
-    {
       "key": "packages/components/src/TableHeaderCell/TableHeaderCell.tsx",
       "value": [
         {
@@ -125,10 +101,6 @@
           "props": {}
         }
       ]
-    },
-    {
-      "key": "packages/components/src/CompTwo/CompTwo.tsx",
-      "value": []
     }
   ]
 }
