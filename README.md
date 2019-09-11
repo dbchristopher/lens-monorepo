@@ -3,11 +3,10 @@
 ## Features
 
 - ⚛️ Create React App 3 (React 16.8)
-- 📖 Storybook 5
 - 🐈 Yarn Workspaces
 - 🐉 Lerna 3
-- ✨ Host Multiple CRA Apps, Component Libraries & Storybooks in one Monorepo
-- 🔥 Hot Reload all Apps, Components & Storybooks
+- ✨ Host Multiple CRA Apps, Component Libraries in one Monorepo
+- 🔥 Hot Reload all Apps, Components
 - 👨‍🔬 Test all workspaces with Eslint & Jest using one command
 - :octocat: Deploy your apps to Github Pages using one command
 
@@ -20,7 +19,7 @@
   - [Installation](#installation)
 - [Usage](#usage)
   - [Starting The React App](#starting-the-react-app)
-  - [Starting The Storybook](#starting-the-storybook)
+  - [Developing The Styleguide](#developing-the-styleguide)
   - [Linting & Testing](#linting--testing)
   - [Deploying to GitHub Pages](#deploying-to-github-pages)
   - [Creating a New CRA App](#creating-a-new-cra-app)
@@ -50,11 +49,10 @@ cd packages/apps/app-one
 yarn start
 ```
 
-### Starting The Storybook
+### Developing The Styleguide
 
 ```bash
-cd packages/storybook
-yarn storybook
+yarn docz:dev
 ```
 
 ### Linting & Testing
@@ -111,11 +109,7 @@ Support for Yarn Workspaces was added by:
      ```json
      {
        "workspaces": {
-         "packages": [
-           "packages/apps/*",
-           "packages/components",
-           "packages/storybook"
-         ],
+         "packages": ["packages/apps/*", "packages/components"],
          "production": true,
          "development": true,
          "package-entry": "main:src"
