@@ -15,26 +15,6 @@
   },
   "entries": [
     {
-      "key": "packages/styleguide/CompOne.mdx",
-      "value": {
-        "name": "Component One",
-        "menu": "Components",
-        "id": "e4c7dc28d302a02b8d024511add0f665",
-        "filepath": "packages/styleguide/CompOne.mdx",
-        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/CompOne.mdx",
-        "link": "",
-        "slug": "packages-styleguide-comp-one",
-        "route": "/packages-styleguide-comp-one",
-        "headings": [
-          {
-            "slug": "comp-one",
-            "depth": 1,
-            "value": "Comp One"
-          }
-        ]
-      }
-    },
-    {
       "key": "packages/styleguide/index.mdx",
       "value": {
         "name": "Hello world",
@@ -53,20 +33,49 @@
           }
         ]
       }
+    },
+    {
+      "key": "packages/styleguide/components/CompOne.mdx",
+      "value": {
+        "name": "Component One",
+        "menu": "Components",
+        "id": "5f35de1bada25ec70e4b1b431dddb0fe",
+        "filepath": "packages/styleguide/components/CompOne.mdx",
+        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/components/CompOne.mdx",
+        "link": "",
+        "slug": "packages-styleguide-components-comp-one",
+        "route": "/packages-styleguide-components-comp-one",
+        "headings": [
+          {
+            "slug": "comp-one",
+            "depth": 1,
+            "value": "Comp One"
+          }
+        ]
+      }
+    },
+    {
+      "key": "packages/styleguide/components/Link.mdx",
+      "value": {
+        "name": "Link",
+        "id": "0bf12c3ed5f3eea5976d54496c7176ca",
+        "filepath": "packages/styleguide/components/Link.mdx",
+        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/components/Link.mdx",
+        "link": "",
+        "slug": "packages-styleguide-components-link",
+        "route": "/packages-styleguide-components-link",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "default-link",
+            "depth": 3,
+            "value": "Default Link"
+          }
+        ]
+      }
     }
   ],
   "props": [
-    {
-      "key": "packages/apps/app-one/src/App.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "App",
-          "methods": [],
-          "actualName": "App"
-        }
-      ]
-    },
     {
       "key": "packages/components/src/CompOne/CompOne.js",
       "value": [
@@ -86,6 +95,17 @@
           "displayName": "CompTwo",
           "methods": [],
           "actualName": "CompTwo"
+        }
+      ]
+    },
+    {
+      "key": "packages/apps/app-one/src/App.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "App",
+          "methods": [],
+          "actualName": "App"
         }
       ]
     }
