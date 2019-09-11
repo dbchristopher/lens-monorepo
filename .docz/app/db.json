@@ -77,35 +77,109 @@
   ],
   "props": [
     {
-      "key": "packages/components/src/CompOne/CompOne.js",
+      "key": "docz-app-typescript/src/components/Alert.tsx",
       "value": [
         {
           "description": "",
-          "displayName": "CompOne",
+          "displayName": "Alert",
           "methods": [],
-          "actualName": "CompOne"
+          "props": {
+            "kind": {
+              "defaultValue": {
+                "value": "info"
+              },
+              "description": "Set this to change alert kind",
+              "name": "kind",
+              "parent": {
+                "fileName": "docz-app-typescript/src/components/Alert.tsx",
+                "name": "AlertProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"info\" | \"positive\" | \"negative\" | \"warning\""
+              }
+            }
+          }
         }
       ]
     },
     {
-      "key": "packages/components/src/CompTwo/CompTwo.js",
+      "key": "docz-app-typescript/src/components/Button.tsx",
       "value": [
         {
           "description": "",
-          "displayName": "CompTwo",
+          "displayName": "Button",
           "methods": [],
-          "actualName": "CompTwo"
+          "props": {
+            "scale": {
+              "defaultValue": {
+                "value": "normal"
+              },
+              "description": "",
+              "name": "scale",
+              "parent": {
+                "fileName": "docz-app-typescript/src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"small\" | \"normal\" | \"big\""
+              }
+            },
+            "kind": {
+              "defaultValue": {
+                "value": "primary"
+              },
+              "description": "",
+              "name": "kind",
+              "parent": {
+                "fileName": "docz-app-typescript/src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "\"primary\" | \"secondary\" | \"cancel\" | \"dark\" | \"gray\""
+              }
+            },
+            "outline": {
+              "defaultValue": {
+                "value": "false"
+              },
+              "description": "",
+              "name": "outline",
+              "parent": {
+                "fileName": "docz-app-typescript/src/components/Button.tsx",
+                "name": "ButtonProps"
+              },
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            }
+          }
         }
       ]
     },
     {
-      "key": "packages/apps/app-one/src/App.js",
+      "key": "packages/components/src/CompOne/CompOne.tsx",
+      "value": []
+    },
+    {
+      "key": "packages/components/src/CompTwo/CompTwo.tsx",
+      "value": []
+    },
+    {
+      "key": "packages/components/src/Link/Link.tsx",
+      "value": []
+    },
+    {
+      "key": "packages/apps/app-one/src/App.tsx",
       "value": [
         {
           "description": "",
           "displayName": "App",
           "methods": [],
-          "actualName": "App"
+          "props": {}
         }
       ]
     }
