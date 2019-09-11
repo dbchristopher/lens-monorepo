@@ -3,5 +3,7 @@ module.exports = {
 	printWidth: 80,
 	jsxSingleQuote: false,
 	bracketSpacing: false,
-	arrowParens: 'avoid'
+	arrowParens: 'avoid',
+	semi: false,
+	trailingComma: 'es5'
 };

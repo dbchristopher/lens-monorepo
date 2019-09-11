@@ -58,13 +58,33 @@
       "key": "packages/styleguide/components/Link.mdx",
       "value": {
         "name": "Link",
+        "menu": "Components",
         "id": "0bf12c3ed5f3eea5976d54496c7176ca",
         "filepath": "packages/styleguide/components/Link.mdx",
         "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/components/Link.mdx",
         "link": "",
         "slug": "packages-styleguide-components-link",
         "route": "/packages-styleguide-components-link",
-        "menu": "",
+        "headings": [
+          {
+            "slug": "default-link",
+            "depth": 3,
+            "value": "Default Link"
+          }
+        ]
+      }
+    },
+    {
+      "key": "packages/styleguide/components/TableHeaderCell.mdx",
+      "value": {
+        "name": "Table Header Cell",
+        "menu": "Components",
+        "id": "9ae47df7fd819c5e16556bb0a26c269d",
+        "filepath": "packages/styleguide/components/TableHeaderCell.mdx",
+        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/components/TableHeaderCell.mdx",
+        "link": "",
+        "slug": "packages-styleguide-components-table-header-cell",
+        "route": "/packages-styleguide-components-table-header-cell",
         "headings": [
           {
             "slug": "default-link",
@@ -88,15 +108,26 @@
       ]
     },
     {
-      "key": "packages/components/src/CompTwo/CompTwo.tsx",
-      "value": []
-    },
-    {
       "key": "packages/components/src/CompOne/CompOne.tsx",
       "value": []
     },
     {
       "key": "packages/components/src/Link/Link.tsx",
+      "value": []
+    },
+    {
+      "key": "packages/components/src/TableHeaderCell/TableHeaderCell.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableHeaderCell",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "packages/components/src/CompTwo/CompTwo.tsx",
       "value": []
     }
   ]
