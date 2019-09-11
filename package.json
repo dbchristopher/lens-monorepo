@@ -4,8 +4,8 @@
   "scripts": {
     "test": "FORCE_COLOR=true lerna run lint && CI=true FORCE_COLOR=true lerna run test -- --coverage",
     "deploy": "FORCE_COLOR=true lerna run deploy",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:dev": "docz dev --typescript",
+    "docz:build": "docz build --typescript"
   },
   "workspaces": {
     "packages": [
@@ -47,6 +47,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "scheduler": "0.15.0",
     "styled-components": "^4.3.2",
+    "styled-system": "^5.1.2",
     "typescript": "^3.6.3"
   },
   "files": [
