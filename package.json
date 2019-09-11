@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "looker-lens-root",
   "private": true,
   "scripts": {
     "test": "FORCE_COLOR=true lerna run lint && CI=true FORCE_COLOR=true lerna run test -- --coverage",

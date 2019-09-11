@@ -9,7 +9,7 @@ try {
 
 const config = {
   siteMetadata: {
-    title: 'Root',
+    title: 'Looker Lens Root',
     description: 'My awesome app using docz',
   },
   plugins: [
@@ -45,7 +45,7 @@ const config = {
         eb: 'master',
         'edit-branch': 'master',
         config: '',
-        title: 'Root',
+        title: 'Looker Lens Root',
         description: 'My awesome app using docz',
         host: 'localhost',
         port: 3000,
