@@ -1,6 +1,7 @@
-import { css } from 'styled-components'
-import { ThemedProps } from '../types'
-import { Theme } from './theme'
+import {css} from 'styled-components'
+import {isFunction} from 'lodash'
+import {ThemedProps} from '../types'
+import {Theme} from './theme'
 
 export type TextTransforms = 'caps' | 'lower' | 'none' | 'upper'
 export type TextVariants =
@@ -10,7 +11,11 @@ export type TextVariants =
   | 'subdued'
   | 'inverted'
 
-export const reset = <P>(props: ThemedProps<P>) => props.theme.reset()
+export const reset = <P>(props: ThemedProps<P>) => {
+  if (isFunction(props.theme.reset)) {
+    props.theme.reset()
+  }
+}
 
 export const shouldTruncate = (truncate?: boolean, truncateLines?: number) => {
   return truncate || truncateLines ? textTruncate(truncateLines) : ''

@@ -1,5 +1,4 @@
 import Tag from 'clean-tag'
-
 import {UserSelectProperty} from 'csstype'
 import omit from 'lodash/omit'
 import React, {FunctionComponent, Ref} from 'react'

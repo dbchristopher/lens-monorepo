@@ -29,7 +29,9 @@ class App extends Component {
           <div className="components">
             <Link>Link TEXT</Link>
           </div>
-          <div className="tokens">{designTokens.colors.RED}</div>
+          <div className="tokens">
+            Font Size: {designTokens.fontSizes.large}
+          </div>
         </header>
       </div>
     )
