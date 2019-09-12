@@ -29,7 +29,7 @@ class App extends Component {
           <div className="components">
             <Link>Link TEXT</Link>
           </div>
-          <div className="tokens">{designTokens}</div>
+          <div className="tokens">{designTokens.colors.RED}</div>
         </header>
       </div>
     )

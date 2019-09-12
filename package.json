@@ -9,7 +9,11 @@
   },
   "workspaces": {
     "packages": [
-      "packages/**/*"
+      "packages/apps/*",
+      "packages/components",
+      "packages/styleguide",
+      "packages/icons",
+      "packages/design-tokens"
     ],
     "nohoist": [
       "**/webpack-dev-server",
