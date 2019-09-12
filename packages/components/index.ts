@@ -1,4 +1,4 @@
-export * from './src/Link'
-export * from './src/TableHeaderCell'
-export * from './src/Swatch'
-export * from './src/Box'
+export {default as Link} from './src/Link'
+export {default as TableHeaderCell} from './src/TableHeaderCell'
+export {default as Swatch} from './src/Swatch'
+export {default as Box} from './src/Box'

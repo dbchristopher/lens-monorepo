@@ -15,5 +15,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["./packages/**/*"]
+  "include": ["./packages/**/*", "./config/typescript/**/*"]
 }

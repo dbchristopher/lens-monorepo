@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.138",
     "@types/node": "^12.7.5",
     "@types/styled-components": "^4.1.19",
     "@types/styled-system": "^5.1.1",
@@ -50,6 +51,7 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "lodash": "^4.17.15",
+    "polished": "^3.4.1",
     "scheduler": "0.15.0",
     "styled-components": "^4.3.2",
     "styled-system": "3.2.1",
