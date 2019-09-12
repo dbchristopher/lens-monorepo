@@ -3,7 +3,8 @@ import ReactLogo from './ReactLogo.svg'
 import YarnCat from './YarnCat.svg'
 import './App.css'
 
-import {Link} from '@project/components'
+import {Link} from 'looker-lens-components'
+import * as designTokens from 'looker-lens-design-tokens'
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
           <div className="components">
             <Link>Link TEXT</Link>
           </div>
+          <div className="tokens">{designTokens}</div>
         </header>
       </div>
     )

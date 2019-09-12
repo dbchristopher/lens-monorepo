@@ -38,10 +38,11 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/setupTests.{js,jsx}",
-      "!src/serviceWorker.{js,jsx}",
-      "!src/**/*.(spec|test|stories).{js,jsx}"
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/setupTests.{js,jsx,ts,tsx}",
+      "!src/index.{js,jsx,ts,tsx}",
+      "!src/serviceWorker.{js,jsx,ts,tsx}",
+      "!src/**/*.(spec|test|stories).{js,jsx,ts,tsx}"
     ],
     "coverageThreshold": {
       "global": {

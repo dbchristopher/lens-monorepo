@@ -4,6 +4,8 @@
     "description": "My awesome app using docz",
     "menu": [
       "Getting Started",
+      "Design Tokens",
+      "Icons",
       "Components"
     ],
     "repository": null,
@@ -73,12 +75,43 @@
           }
         ]
       }
+    },
+    {
+      "key": "packages/styleguide/design-tokens/colors.mdx",
+      "value": {
+        "name": "Colors",
+        "menu": "Design Tokens",
+        "id": "b3fb75c61deb7a296a3a5fd7f1612ee0",
+        "filepath": "packages/styleguide/design-tokens/colors.mdx",
+        "fullpath": "/Users/danielchristopher/Looker/lens-monorepo/packages/styleguide/design-tokens/colors.mdx",
+        "link": "",
+        "slug": "packages-styleguide-design-tokens-colors",
+        "route": "/packages-styleguide-design-tokens-colors",
+        "headings": [
+          {
+            "slug": "colors",
+            "depth": 1,
+            "value": "Colors"
+          }
+        ]
+      }
     }
   ],
   "props": [
     {
       "key": "packages/components/src/Link/Link.tsx",
       "value": []
+    },
+    {
+      "key": "packages/components/src/TableHeaderCell/TableHeaderCell.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableHeaderCell",
+          "methods": [],
+          "props": {}
+        }
+      ]
     },
     {
       "key": "packages/apps/app-one/src/App.tsx",
@@ -92,15 +125,8 @@
       ]
     },
     {
-      "key": "packages/components/src/TableHeaderCell/TableHeaderCell.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableHeaderCell",
-          "methods": [],
-          "props": {}
-        }
-      ]
+      "key": "packages/components/src/Swatch/Swatch.tsx",
+      "value": []
     }
   ]
 }

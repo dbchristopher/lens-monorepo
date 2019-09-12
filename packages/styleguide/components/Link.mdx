@@ -3,12 +3,14 @@ name: Link
 menu: Components
 ---
 
-import {Playground} from 'docz'
+import {Playground, Props} from 'docz'
 import {Link} from 'looker-lens-components'
 
 ### Default Link
 
 The `<Link />` component renders an `<a>` tag that accepts and `href` property. You can also supply an optional `id` property if you want to give your anchor an id.
+
+<Props of={Link} />
 
 <Playground>
   <Link href="https://looker.com">👋 I am a link!</Link>
