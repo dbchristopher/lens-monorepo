@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, List, ListItem } from 'looker-lens-components';
+import { theme } from 'looker-lens-design-tokens';
+import { ThemeProvider } from 'styled-components';
 import { SpacingTable } from './BoxSpacingRecipeTable.styles';
 
 const spacingTypes = [
@@ -85,32 +87,34 @@ class BoxSpacingRecipeTableRender extends React.Component<
 
   public render() {
     return (
-      <SpacingTable>
-        <div>
-          {SpaceListHeader('1. Type')}
-          <List>
-            {this.state.types.map((col, i) => {
-              return ListRender(col.value, col.label, i);
-            })}
-          </List>
-        </div>
-        <div>
-          {SpaceListHeader('2. Side', '(optional)')}
-          <List>
-            {this.state.sides.map((col, i) => {
-              return ListRender(col.value, col.label, i, col.defaultLabel);
-            })}
-          </List>
-        </div>
-        <div>
-          {SpaceListHeader('3. Amount')}
-          <List>
-            {this.state.sizes.map((col, i) => {
-              return ListRender(col.value, col.label, i);
-            })}
-          </List>
-        </div>
-      </SpacingTable>
+      <ThemeProvider theme={theme}>
+        <SpacingTable>
+          <div>
+            {SpaceListHeader('1. Type')}
+            <List>
+              {this.state.types.map((col, i) => {
+                return ListRender(col.value, col.label, i);
+              })}
+            </List>
+          </div>
+          <div>
+            {SpaceListHeader('2. Side', '(optional)')}
+            <List>
+              {this.state.sides.map((col, i) => {
+                return ListRender(col.value, col.label, i, col.defaultLabel);
+              })}
+            </List>
+          </div>
+          <div>
+            {SpaceListHeader('3. Amount')}
+            <List>
+              {this.state.sizes.map((col, i) => {
+                return ListRender(col.value, col.label, i);
+              })}
+            </List>
+          </div>
+        </SpacingTable>
+      </ThemeProvider>
     );
   }
 }

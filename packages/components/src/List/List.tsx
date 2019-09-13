@@ -1,5 +1,6 @@
 import React, { FunctionComponent, Ref } from 'react';
-import styled, { css, StyledComponent } from 'styled-components';
+import styled, { css, StyledComponent, ThemeProvider } from 'styled-components';
+import { theme } from 'looker-lens-design-tokens';
 import { BoxProps } from '../Box/Box';
 import Box from '../Box';
 
@@ -17,30 +18,17 @@ type StyledComponentType = StyledComponent<ComponentType, ListProps>;
 /**
  * List are stacked groups of related content that can be useful in many contexts.
  */
-const InternalList: ComponentType = ({ type, ...props }) => {
-  const pl = props.nomarker ? 'none' : 'medium';
-  delete props.nomarker;
-  switch (type) {
-    case 'number':
-    case 'letter':
-      return (
-        <Box is="ol" m="none" pl={pl} {...props}>
-          {props.children}
-        </Box>
-      );
-    case 'bullet':
-      return (
-        <Box is="ul" m="none" pl={pl} {...props}>
-          {props.children}
-        </Box>
-      );
-    default:
-      return (
-        <Box is="ul" m="none" p="none" {...props}>
-          {props.children}
-        </Box>
-      );
-  }
+const InternalList: ComponentType = ({ type, nomarker, ...props }) => {
+  const pl = nomarker ? 'none' : 'medium';
+  const listType = type === 'number' || type === 'letter' ? 'ol' : 'ul';
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Box is={listType} m="none" pl={pl} {...props}>
+        {props.children}
+      </Box>
+    </ThemeProvider>
+  );
 };
 
 function listStyleType(props: ListProps) {
