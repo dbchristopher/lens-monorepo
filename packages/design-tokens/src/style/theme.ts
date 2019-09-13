@@ -1,6 +1,6 @@
-import { rem } from 'polished'
-import { InterpolationValue } from 'styled-components'
-import { ResponsiveValue, SpaceProps } from 'styled-system'
+import { rem } from 'polished';
+import { InterpolationValue } from 'styled-components';
+import { ResponsiveValue } from 'styled-system';
 import {
   SizeLarge,
   SizeMedium,
@@ -12,26 +12,26 @@ import {
   SizeXXSmall,
   SizeXXXLarge,
   SizeXXXXLarge,
-} from '../types'
-import { Easings, easings } from './easings'
-import { shadows, Shadows } from './elevation'
-import { FontRamp, fontSizes } from './font_sizes'
-import { FontWeightRamp, fontWeights } from './font_weights'
-import { fonts, Fonts } from './fonts'
-import { lineHeights } from './line_heights'
-import { palette, Palette } from './palette'
-import { radii, Radii } from './radii'
-import { SemanticColors, semanticColors } from './semantic_colors'
-import { transitions, Transitions } from './transitions'
+} from '../types';
+import { Easings, easings } from './easings';
+import { shadows, Shadows } from './elevation';
+import { FontRamp, fontSizes } from './font_sizes';
+import { FontWeightRamp, fontWeights } from './font_weights';
+import { fonts, Fonts } from './fonts';
+import { lineHeights } from './line_heights';
+import { palette, Palette } from './palette';
+import { radii, Radii } from './radii';
+import { SemanticColors, semanticColors } from './semantic_colors';
+import { transitions, Transitions } from './transitions';
 
-export * from './easings'
-export * from './elevation'
-export * from './font_sizes'
-export * from './font_weights'
-export * from './line_heights'
-export * from './palette'
-export * from './semantic_colors'
-export * from './transitions'
+export * from './easings';
+export * from './elevation';
+export * from './font_sizes';
+export * from './font_weights';
+export * from './line_heights';
+export * from './palette';
+export * from './semantic_colors';
+export * from './transitions';
 
 export type SpacingSizes =
   | SizeNone
@@ -43,29 +43,58 @@ export type SpacingSizes =
   | SizeXLarge
   | SizeXXLarge
   | SizeXXXLarge
-  | SizeXXXXLarge
+  | SizeXXXXLarge;
 
-export type ResponsiveSpacingSize = ResponsiveValue<SpacingSizes> | 'auto'
+export type ResponsiveSpacingSize = ResponsiveValue<SpacingSizes> | 'auto';
 
-export type LensSpaceProps = { [P in keyof SpaceProps]: ResponsiveSpacingSize }
+export type LensSpaceProps = {
+  m?: ResponsiveSpacingSize;
+  margin?: ResponsiveSpacingSize;
+  mt?: ResponsiveSpacingSize;
+  marginTop?: ResponsiveSpacingSize;
+  mr?: ResponsiveSpacingSize;
+  marginRight?: ResponsiveSpacingSize;
+  mb?: ResponsiveSpacingSize;
+  marginBottom?: ResponsiveSpacingSize;
+  ml?: ResponsiveSpacingSize;
+  marginLeft?: ResponsiveSpacingSize;
+  mx?: ResponsiveSpacingSize;
+  marginX?: ResponsiveSpacingSize;
+  my?: ResponsiveSpacingSize;
+  marginY?: ResponsiveSpacingSize;
+  p?: ResponsiveSpacingSize;
+  padding?: ResponsiveSpacingSize;
+  pt?: ResponsiveSpacingSize;
+  paddingTop?: ResponsiveSpacingSize;
+  pr?: ResponsiveSpacingSize;
+  paddingRight?: ResponsiveSpacingSize;
+  pb?: ResponsiveSpacingSize;
+  paddingBottom?: ResponsiveSpacingSize;
+  pl?: ResponsiveSpacingSize;
+  paddingLeft?: ResponsiveSpacingSize;
+  px?: ResponsiveSpacingSize;
+  paddingX?: ResponsiveSpacingSize;
+  py?: ResponsiveSpacingSize;
+  paddingY?: ResponsiveSpacingSize;
+};
 
 export interface Theme {
-  breakpoints: string[]
-  colors: { palette: Palette; semanticColors: SemanticColors }
-  easings: Easings
-  fontSizes: FontRamp
-  fontWeights: FontWeightRamp
-  fonts: Fonts
-  lineHeights: FontRamp
-  radii: Radii
+  breakpoints: string[];
+  colors: { palette: Palette; semanticColors: SemanticColors };
+  easings: Easings;
+  fontSizes: FontRamp;
+  fontWeights: FontWeightRamp;
+  fonts: Fonts;
+  lineHeights: FontRamp;
+  radii: Radii;
   /**
    * A function that can be overridden to return different reset css properties
    * or null to remove all resets. Most base elements in Lens implement the reset.
    */
-  reset: () => InterpolationValue
-  shadows: Shadows
-  space: Record<SpacingSizes, string>
-  transitions: Transitions
+  reset: () => InterpolationValue;
+  shadows: Shadows;
+  space: Record<SpacingSizes, string>;
+  transitions: Transitions;
 }
 
 export const theme: Theme = {
@@ -86,7 +115,7 @@ export const theme: Theme = {
       margin: 0,
       padding: 0,
       verticalAlign: 'baseline',
-    }
+    };
   },
   shadows,
   space: {
@@ -104,4 +133,4 @@ export const theme: Theme = {
     // tslint:enable:object-literal-sort-keys
   },
   transitions,
-}
+};

@@ -1,6 +1,6 @@
-import { rem } from 'polished'
-import { LineHeightProps, ResponsiveValue } from 'styled-system'
-import { FontRamp, RampSizes } from './font_sizes'
+import { rem } from 'polished';
+import { ResponsiveValue } from 'styled-system';
+import { FontRamp, RampSizes } from './font_sizes';
 
 // tslint:disable:object-literal-sort-keys
 export const lineHeights: FontRamp = {
@@ -13,9 +13,9 @@ export const lineHeights: FontRamp = {
   small: rem(20),
   xsmall: rem(16),
   xxsmall: rem(16),
-}
+};
 
-export type ResponsiveLineHeight = ResponsiveValue<RampSizes>
+export type ResponsiveLineHeight = ResponsiveValue<RampSizes>;
 export type LensLineHeightProps = {
-  [P in keyof LineHeightProps]: ResponsiveLineHeight
-}
+  lineHeight?: ResponsiveLineHeight;
+};

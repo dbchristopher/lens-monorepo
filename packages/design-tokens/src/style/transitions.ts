@@ -1,10 +1,10 @@
 export interface Transitions {
-  durationComplex: string
-  durationIntricate: string
-  durationModerate: string
-  durationQuick: string
-  durationRapid: string
-  durationSimple: string
+  durationComplex: string;
+  durationIntricate: string;
+  durationModerate: string;
+  durationQuick: string;
+  durationRapid: string;
+  durationSimple: string;
 }
 
 // tslint:disable:object-literal-sort-keys
@@ -15,4 +15,4 @@ export const transitions: Transitions = {
   durationModerate: '300ms',
   durationComplex: '300ms',
   durationIntricate: '500ms',
-}
+};

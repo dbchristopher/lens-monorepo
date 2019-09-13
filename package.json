@@ -22,6 +22,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "docz": "^2.0.0-rc.38",
@@ -51,8 +52,8 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "looker-lens-design-tokens": "1.0.0",
     "lodash": "^4.17.15",
+    "looker-lens-design-tokens": "1.0.0",
     "polished": "^3.4.1",
     "scheduler": "0.15.0",
     "styled-components": "^4.3.2",

@@ -1,9 +1,9 @@
 export interface Easings {
-  ease: string
-  easeIn: string
-  easeInBack: string
-  easeOut: string
-  easeOutBack: string
+  ease: string;
+  easeIn: string;
+  easeInBack: string;
+  easeOut: string;
+  easeOutBack: string;
 }
 
 export const easings: Easings = {
@@ -12,4 +12,4 @@ export const easings: Easings = {
   easeInBack: 'cubic-bezier(0.6, -0.28, 0.735, 0.045)',
   easeOut: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
   easeOutBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-}
+};

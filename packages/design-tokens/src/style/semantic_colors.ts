@@ -1,4 +1,4 @@
-import { palette } from './palette'
+import { palette } from './palette';
 
 const {
   blue500,
@@ -21,27 +21,27 @@ const {
   red600,
   red700,
   white,
-} = palette
+} = palette;
 
 export interface SemanticColor {
   /** The base color for a named color set. */
-  main: string
+  main: string;
   /** Usually a tint of the main color, used in cases like visited links or pressed buttons. */
-  light: string
+  light: string;
   /** Usually an even lighter tint of the main color. */
-  lighter: string
+  lighter: string;
   /** Base color for links in a color group. */
-  linkColor: string
+  linkColor: string;
   /** Usually a dark tint of the main color, used to indicate interactivity such as button hover. */
-  dark: string
+  dark: string;
   /** Usually an even darker tint of the main color, used to indicate an action like button press. */
-  darker: string
+  darker: string;
   /** Primary border color for a semantic color group. */
-  borderColor: string
+  borderColor: string;
   /** Base text color for a semantic color group. */
-  text: string
+  text: string;
   /** Alternative text color */
-  altText: string
+  altText: string;
 }
 
 /**
@@ -64,13 +64,13 @@ export interface SemanticColor {
  */
 export interface SemanticColors {
   /** Colors used for primary actions. */
-  primary: SemanticColor
+  primary: SemanticColor;
   /** Colors used for secondary actions. */
-  secondary: SemanticColor
+  secondary: SemanticColor;
   /** Colors used for dangerous actions. */
-  danger: SemanticColor
+  danger: SemanticColor;
   /** Colors used for neutral actions. */
-  neutral: SemanticColor
+  neutral: SemanticColor;
 }
 
 export const semanticColors: SemanticColors = {
@@ -118,4 +118,4 @@ export const semanticColors: SemanticColors = {
     main: primary500,
     text: white,
   },
-}
+};
