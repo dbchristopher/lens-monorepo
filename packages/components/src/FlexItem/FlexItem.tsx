@@ -1,6 +1,7 @@
 import React, { FunctionComponent, Ref } from 'react';
 import styled, { css, StyledComponent } from 'styled-components';
-import { Box, BoxBasePropsWithout, BoxFlexItemProps } from '../Box';
+import { BoxBasePropsWithout, BoxFlexItemProps } from '../Box/Box';
+import Box from '../Box';
 
 export interface FlexItemProps
   extends BoxBasePropsWithout<HTMLDivElement, 'display'>,
