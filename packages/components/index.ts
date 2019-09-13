@@ -7,3 +7,7 @@ export { default as ListItem } from './src/ListItem';
 export { default as Paragraph } from './src/Paragraph';
 export { default as Code } from './src/Code';
 export { default as Text } from './src/Text';
+export { default as Card } from './src/Card';
+export { default as CardContent } from './src/CardContent';
+export { default as CardMedia } from './src/CardMedia';
+export { default as Heading } from './src/Heading';
