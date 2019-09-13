@@ -11,3 +11,5 @@ export { default as Card } from './src/Card';
 export { default as CardContent } from './src/CardContent';
 export { default as CardMedia } from './src/CardMedia';
 export { default as Heading } from './src/Heading';
+export { default as Flex } from './src/Flex';
+export { default as FlexItem } from './src/FlexItem';
