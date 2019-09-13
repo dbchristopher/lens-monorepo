@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { createWithTheme } from '../../../test/utils/create_with_theme'
-import { List } from './List'
-import { ListItem } from '../ListItem/ListItem'
+import React from 'react';
+import { createWithTheme } from '../../../test/utils/create_with_theme';
+import { List } from './List';
+import { ListItem } from '../ListItem/ListItem';
 
-import 'jest-styled-components'
+import 'jest-styled-components';
 
 test('A default List, should be a ul', () => {
   const component = createWithTheme(
@@ -12,10 +12,10 @@ test('A default List, should be a ul', () => {
       <ListItem>🍕</ListItem>
       <ListItem>🥨</ListItem>
     </List>
-  )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 test('A bulleted List', () => {
   const component = createWithTheme(
@@ -24,10 +24,10 @@ test('A bulleted List', () => {
       <ListItem>🍕</ListItem>
       <ListItem>🥨</ListItem>
     </List>
-  )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 test('A numerically ordered List', () => {
   const component = createWithTheme(
@@ -36,10 +36,10 @@ test('A numerically ordered List', () => {
       <ListItem>🍕</ListItem>
       <ListItem>🥨</ListItem>
     </List>
-  )
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  );
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 test('A numerically ordered List marked as nomarker', () => {
   const component = createWithTheme(
@@ -48,9 +48,9 @@ test('A numerically ordered List marked as nomarker', () => {
       <ListItem>🍕</ListItem>
       <ListItem>🥨</ListItem>
     </List>
-  )
-  const tree = component.toJSON()
-  expect(tree).toHaveStyleRule('list-style-type', 'none')
-  expect(tree).toHaveStyleRule('padding-left', '0rem')
-  expect(tree).toMatchSnapshot()
-})
+  );
+  const tree = component.toJSON();
+  expect(tree).toHaveStyleRule('list-style-type', 'none');
+  expect(tree).toHaveStyleRule('padding-left', '0rem');
+  expect(tree).toMatchSnapshot();
+});
