@@ -5,7 +5,8 @@
     "test": "FORCE_COLOR=true lerna run lint && CI=true FORCE_COLOR=true lerna run test -- --coverage",
     "deploy": "FORCE_COLOR=true lerna run deploy",
     "docz:dev": "docz dev --typescript",
-    "docz:build": "docz build --typescript"
+    "docz:build": "docz build --typescript",
+    "react:dev": "cd packages/apps/app-one && yarn start"
   },
   "workspaces": {
     "packages": [

@@ -4,7 +4,7 @@ menu: Components
 ---
 
 import { Playground } from 'docz';
-import { Text, Paragraph, Code } from 'looker-lens-components';
+import { Text, Paragraph, Code, Card, Heading } from 'looker-lens-components';
 
 # Text
 
@@ -92,16 +92,14 @@ You can use the `align` property to change the alignment of the rendered text, b
 
 At times you may want your `<Paragraph />` or `<Heading />` to truncate instead of the text wrapping, the `truncate` property will do that for you. For a multiline truncate, use `truncateLines` (this is not supported in IE11).
 
-```js
-import { Heading } from '../Heading/Heading';
-
-<div style={{ width: '40%' }}>
-  <Heading truncate is="h2">
-    Hello there I am a heading that will truncate to one line 🍕🥑🍪🥓
-  </Heading>
-  <Paragraph truncateLines={2}>
-    And I am some text that is super long and gets truncated at two lines with
-    an ellipsis.
-  </Paragraph>
-</div>;
-```
+<Playground>
+  <div style={{ width: '40%' }}>
+    <Heading truncate is="h2">
+      Hello there I am a heading that will truncate to one line 🍕🥑🍪🥓
+    </Heading>
+    <Paragraph truncateLines={2}>
+      And I am some text that is super long and gets truncated at two lines with
+      an ellipsis.
+    </Paragraph>
+  </div>
+</Playground>

@@ -1,9 +1,14 @@
 import omit from 'lodash/omit';
 import React, { FunctionComponent, Ref } from 'react';
-import styled, { StyledComponent, withTheme } from 'styled-components';
+import styled, {
+  StyledComponent,
+  withTheme,
+  ThemeProvider,
+} from 'styled-components';
 import { ThemedProps } from '../types';
 import { BoxProps } from '../Box/Box';
 import Box from '../Box';
+import { theme } from 'looker-lens-design-tokens';
 
 export interface CardProps extends BoxProps<HTMLDivElement> {
   raised?: boolean;
@@ -51,4 +56,8 @@ const Card: StyledCardComponentType = styled<CardComponentType>(CardFactory)`
   }
 `;
 
-export default Card;
+export default (props: any) => (
+  <ThemeProvider theme={theme}>
+    <Card {...props} />
+  </ThemeProvider>
+);

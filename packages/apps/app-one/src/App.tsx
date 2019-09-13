@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import ReactLogo from './ReactLogo.svg'
-import YarnCat from './YarnCat.svg'
-import './App.css'
+import React, { Component } from 'react';
+import ReactLogo from './ReactLogo.svg';
+import YarnCat from './YarnCat.svg';
+import './App.css';
 
-import {Link} from 'looker-lens-components'
-import * as designTokens from 'looker-lens-design-tokens'
+import { Link, Card, Flex, Swatch } from 'looker-lens-components';
+import * as designTokens from 'looker-lens-design-tokens';
 
 class App extends Component {
   render() {
@@ -27,15 +27,18 @@ class App extends Component {
           </h1>
           <h2>Hot Reload Your Workspaces</h2>
           <div className="components">
-            <Link>Link TEXT</Link>
+            <Link>Link Text</Link>
+            <Card>Card</Card>
+            <Flex>Flex</Flex>
+            <Swatch />
           </div>
           <div className="tokens">
             Font Size: {designTokens.fontSizes.large}
           </div>
         </header>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
