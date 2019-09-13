@@ -1,5 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Swatch = styled.div`
   width: 40px;
@@ -9,6 +8,6 @@ const Swatch = styled.div`
   border-radius: 3px;
   display: inline-block;
   margin: 5px;
-`
+`;
 
-export default Swatch
+export default Swatch;

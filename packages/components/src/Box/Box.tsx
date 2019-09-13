@@ -1,13 +1,13 @@
-import Tag from 'clean-tag'
-import {UserSelectProperty} from 'csstype'
-import omit from 'lodash/omit'
-import React, {FunctionComponent, Ref} from 'react'
+import Tag from 'clean-tag';
+import { UserSelectProperty } from 'csstype';
+import omit from 'lodash/omit';
+import React, { FunctionComponent, Ref } from 'react';
 import styled, {
   css,
   CSSObject,
   FlattenSimpleInterpolation,
   StyledComponent,
-} from 'styled-components'
+} from 'styled-components';
 import {
   alignContent,
   AlignContentProps,
@@ -89,16 +89,16 @@ import {
   WidthProps,
   zIndex,
   ZIndexProps,
-} from 'styled-system'
+} from 'styled-system';
 import {
   LensFontSizeProps,
   LensFontWeightProps,
   LensLineHeightProps,
   LensSpaceProps,
   reset,
-} from 'looker-lens-design-tokens'
-import {Omit} from '../types'
-import {cursor, CursorProps} from './style_utilities'
+} from 'looker-lens-design-tokens';
+import { Omit } from '../types';
+import { cursor, CursorProps } from './style_utilities';
 
 export interface BoxFlexProps
   extends AlignContentProps,
@@ -124,7 +124,7 @@ export type StyledSystemCompatibleHTMLProps<T> = Omit<
   | 'fontWeight'
   | 'size'
   | 'as'
->
+>;
 
 export interface BoxBaseProps<T>
   extends StyledSystemCompatibleHTMLProps<T>,
@@ -162,11 +162,11 @@ export interface BoxBaseProps<T>
     VerticalAlignProps,
     WidthProps,
     ZIndexProps {
-  className?: string
-  animation?: FlattenSimpleInterpolation
-  is?: string | JSX.Element
-  ref?: React.Ref<any>
-  style?: React.CSSProperties
+  className?: string;
+  animation?: FlattenSimpleInterpolation;
+  is?: string | JSX.Element;
+  ref?: React.Ref<any>;
+  style?: React.CSSProperties;
 
   /**
    * Styling for :hover pseudo class.
@@ -174,29 +174,29 @@ export interface BoxBaseProps<T>
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
    * @example <Box hoverStyle={{border: '1px solid black'}}/>
    */
-  hoverStyle?: CSSObject
+  hoverStyle?: CSSObject;
   /**
    * Styling for :focus pseudo class.
    *
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
    * @example <Box focusStyle={{border: '1px solid black'}}/>
    */
-  focusStyle?: CSSObject
+  focusStyle?: CSSObject;
   /**
    * Styling for :active pseudo class.
    *
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
    * @example <Box activeStyle={{border: '1px solid black'}}/>
    */
-  activeStyle?: CSSObject
+  activeStyle?: CSSObject;
   /**
    * Property to set user-select CSS property
    *
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
    * @example <Box userSelect="none"/>
    */
-  userSelect?: UserSelectProperty
-  innerRef?: any
+  userSelect?: UserSelectProperty;
+  innerRef?: any;
 }
 
 export interface BoxProps<T>
@@ -204,11 +204,14 @@ export interface BoxProps<T>
     BoxFlexProps,
     BoxFlexItemProps {}
 
-export type BoxBasePropsWithout<T, Keys> = Omit<BoxBaseProps<T>, Keys>
-export type BoxPropsWithout<T, Keys> = Omit<BoxProps<T>, Keys>
+export type BoxBasePropsWithout<T, Keys> = Omit<BoxBaseProps<T>, Keys>;
+export type BoxPropsWithout<T, Keys> = Omit<BoxProps<T>, Keys>;
 
-type ComponentType = FunctionComponent<BoxProps<HTMLElement>>
-type StyledComponentType = StyledComponent<ComponentType, BoxProps<HTMLElement>>
+type ComponentType = FunctionComponent<BoxProps<HTMLElement>>;
+type StyledComponentType = StyledComponent<
+  ComponentType,
+  BoxProps<HTMLElement>
+>;
 
 const pseudoClassHover = (props: BoxProps<HTMLElement>) => {
   return (
@@ -218,8 +221,8 @@ const pseudoClassHover = (props: BoxProps<HTMLElement>) => {
         ${props.hoverStyle};
       }
     `
-  )
-}
+  );
+};
 
 const pseudoClassFocus = (props: BoxProps<HTMLElement>) => {
   return (
@@ -229,8 +232,8 @@ const pseudoClassFocus = (props: BoxProps<HTMLElement>) => {
         ${props.focusStyle};
       }
     `
-  )
-}
+  );
+};
 
 const pseudoClassActive = (props: BoxProps<HTMLElement>) => {
   return (
@@ -240,8 +243,8 @@ const pseudoClassActive = (props: BoxProps<HTMLElement>) => {
         ${props.activeStyle};
       }
     `
-  )
-}
+  );
+};
 
 const userSelectCSS = (props: BoxProps<HTMLElement>) => {
   return (
@@ -249,15 +252,15 @@ const userSelectCSS = (props: BoxProps<HTMLElement>) => {
     css`
       user-select: ${props.userSelect};
     `
-  )
-}
+  );
+};
 
 const cursorPointerOnClick = (props: BoxProps<HTMLElement>) =>
   props.onClick &&
   !props.disabled &&
   css`
     cursor: pointer;
-  `
+  `;
 
 //
 // Get theme from ThemeProvider
@@ -275,7 +278,7 @@ const BoxFactory = React.forwardRef<StyledComponentType, BoxProps<HTMLElement>>(
       fontSize,
       innerRef,
       ...otherProps
-    } = props
+    } = props;
     return (
       <Tag
         lineHeight={lineHeight}
@@ -284,9 +287,9 @@ const BoxFactory = React.forwardRef<StyledComponentType, BoxProps<HTMLElement>>(
         ref={ref || innerRef}
         {...omit(otherProps, ['animation'])}
       />
-    )
+    );
   }
-)
+);
 
 /** @component */
 const Box = styled<ComponentType>(BoxFactory)`
@@ -366,6 +369,6 @@ const Box = styled<ComponentType>(BoxFactory)`
   ${verticalAlign};
   ${width};
   ${zIndex};
-`
+`;
 
-export default Box
+export default Box;

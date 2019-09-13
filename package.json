@@ -12,7 +12,8 @@
       "packages/apps/*",
       "packages/components",
       "packages/icons",
-      "packages/design-tokens"
+      "packages/design-tokens",
+      "packages/styleguide"
     ],
     "nohoist": [
       "**/webpack-dev-server",
@@ -50,6 +51,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "looker-lens-design-tokens": "1.0.0",
     "lodash": "^4.17.15",
     "polished": "^3.4.1",
     "scheduler": "0.15.0",

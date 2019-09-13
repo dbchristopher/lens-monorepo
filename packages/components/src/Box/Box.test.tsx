@@ -4,8 +4,8 @@ import {
   createWithTheme,
   mountWithTheme,
 } from '../../../test/utils/create_with_theme'
-import { assertSnapshot } from '../../../test/utils/snapshot'
-import { Box } from './Box'
+import {assertSnapshot} from '../../../test/utils/snapshot'
+import Box from './Box'
 
 const noop = () => {
   return
@@ -115,7 +115,7 @@ describe('Box', () => {
     })
 
     test('any prop can be passed to Box', () => {
-      const BoxAsInput: React.FC<{ type?: string }> = props => (
+      const BoxAsInput: React.FC<{type?: string}> = props => (
         <Box is="input" {...props} />
       )
       const boxAsCheckbox = mountWithTheme(<BoxAsInput type="checkbox" />)
@@ -159,7 +159,7 @@ describe('Box', () => {
   describe('hover, focus, active', () => {
     test('Box has hover style', () => {
       const tree = createWithTheme(
-        <Box hoverStyle={{ backgroundColor: 'red' }} />
+        <Box hoverStyle={{backgroundColor: 'red'}} />
       ).toJSON()
       expect(tree).toHaveStyleRule('background-color', 'red', {
         modifier: ':hover',
@@ -168,7 +168,7 @@ describe('Box', () => {
 
     test('Box has focus style', () => {
       const tree = createWithTheme(
-        <Box focusStyle={{ backgroundColor: 'red' }} />
+        <Box focusStyle={{backgroundColor: 'red'}} />
       ).toJSON()
       expect(tree).toHaveStyleRule('background-color', 'red', {
         modifier: ':focus',
@@ -177,7 +177,7 @@ describe('Box', () => {
 
     test('Box has active style', () => {
       const tree = createWithTheme(
-        <Box activeStyle={{ backgroundColor: 'red' }} />
+        <Box activeStyle={{backgroundColor: 'red'}} />
       ).toJSON()
       expect(tree).toHaveStyleRule('background-color', 'red', {
         modifier: ':active',
