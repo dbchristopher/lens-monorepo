@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, List, ListItem } from 'looker-lens-components';
+import { SpacingTable } from './BoxSpacingRecipeTable.styles';
 
 const spacingTypes = [
   { value: 'm', label: 'Margin' },
@@ -84,32 +85,32 @@ class BoxSpacingRecipeTableRender extends React.Component<
 
   public render() {
     return (
-      <div className="spacing-table">
-        <Box pr="xxlarge">
+      <SpacingTable>
+        <div>
           {SpaceListHeader('1. Type')}
           <List>
             {this.state.types.map((col, i) => {
               return ListRender(col.value, col.label, i);
             })}
           </List>
-        </Box>
-        <Box px="xxlarge">
+        </div>
+        <div>
           {SpaceListHeader('2. Side', '(optional)')}
           <List>
             {this.state.sides.map((col, i) => {
               return ListRender(col.value, col.label, i, col.defaultLabel);
             })}
           </List>
-        </Box>
-        <Box px="xxlarge">
+        </div>
+        <div>
           {SpaceListHeader('3. Amount')}
           <List>
             {this.state.sizes.map((col, i) => {
               return ListRender(col.value, col.label, i);
             })}
           </List>
-        </Box>
-      </div>
+        </div>
+      </SpacingTable>
     );
   }
 }
