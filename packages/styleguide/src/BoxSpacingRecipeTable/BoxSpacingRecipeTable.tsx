@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, List, ListItem } from 'looker-lens-components';
+import { Box, List, ListItem, Text, Code } from 'looker-lens-components';
 import { theme } from 'looker-lens-design-tokens';
 import { ThemeProvider } from 'styled-components';
 import { SpacingTable } from './BoxSpacingRecipeTable.styles';
@@ -39,9 +39,18 @@ export interface ColumnExample {
 const SpaceListHeader = (text: string, defaultLabel?: string) => {
   return (
     <Box mb="medium">
-      <p>{text}</p>
+      <Text
+        fontSize="medium"
+        variant="secondary"
+        textTransform="upper"
+        fontWeight="semiBold"
+      >
+        {text}
+      </Text>
       <Box is="span" ml="xsmall">
-        <p>{defaultLabel}</p>
+        <Text fontSize="xsmall" variant="subdued">
+          {defaultLabel}
+        </Text>
       </Box>
     </Box>
   );
@@ -55,13 +64,21 @@ const ListRender = (
 ) => {
   return (
     <ListItem key={key}>
-      <Box px="small" is="span" className="prop-code">
-        <code>{value}</code>
+      <Box
+        px="small"
+        is="span"
+        bg="palette.charcoal200"
+        borderRadius="4px"
+        display="inline-block"
+      >
+        <Code fontSize="xsmall">{value}</Code>
       </Box>
       <Box ml="small" is="span">
-        <p>{label}</p>
+        <Text fontSize="small">{label}</Text>
         <Box is="span" ml="xsmall">
-          <p>{defaultLabel}</p>
+          <Text fontSize="xsmall" variant="subdued">
+            {defaultLabel}
+          </Text>
         </Box>
       </Box>
     </ListItem>
@@ -91,7 +108,7 @@ class BoxSpacingRecipeTableRender extends React.Component<
         <SpacingTable>
           <div>
             {SpaceListHeader('1. Type')}
-            <List>
+            <List pl="none">
               {this.state.types.map((col, i) => {
                 return ListRender(col.value, col.label, i);
               })}
@@ -99,7 +116,7 @@ class BoxSpacingRecipeTableRender extends React.Component<
           </div>
           <div>
             {SpaceListHeader('2. Side', '(optional)')}
-            <List>
+            <List pl="none">
               {this.state.sides.map((col, i) => {
                 return ListRender(col.value, col.label, i, col.defaultLabel);
               })}
@@ -107,7 +124,7 @@ class BoxSpacingRecipeTableRender extends React.Component<
           </div>
           <div>
             {SpaceListHeader('3. Amount')}
-            <List>
+            <List pl="none">
               {this.state.sizes.map((col, i) => {
                 return ListRender(col.value, col.label, i);
               })}

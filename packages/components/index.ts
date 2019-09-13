@@ -1,6 +1,9 @@
-export { default as Link } from './src/Link'
-export { default as TableHeaderCell } from './src/TableHeaderCell'
-export { default as Swatch } from './src/Swatch'
-export { default as Box } from './src/Box'
-export { default as List } from './src/List'
-export { default as ListItem } from './src/ListItem'
+export { default as Link } from './src/Link';
+export { default as TableHeaderCell } from './src/TableHeaderCell';
+export { default as Swatch } from './src/Swatch';
+export { default as Box } from './src/Box';
+export { default as List } from './src/List';
+export { default as ListItem } from './src/ListItem';
+export { default as Paragraph } from './src/Paragraph';
+export { default as Code } from './src/Code';
+export { default as Text } from './src/Text';

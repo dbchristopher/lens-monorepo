@@ -7,6 +7,7 @@ import styled, {
   CSSObject,
   FlattenSimpleInterpolation,
   StyledComponent,
+  ThemeProvider,
 } from 'styled-components';
 import {
   alignContent,
@@ -96,6 +97,7 @@ import {
   LensLineHeightProps,
   LensSpaceProps,
   reset,
+  theme,
 } from 'looker-lens-design-tokens';
 import { Omit } from '../types';
 import { cursor, CursorProps } from './style_utilities';
@@ -291,7 +293,6 @@ const BoxFactory = React.forwardRef<StyledComponentType, BoxProps<HTMLElement>>(
   }
 );
 
-/** @component */
 const Box = styled<ComponentType>(BoxFactory)`
   /**
    * Global reset applied to prevent styling on top level tags outside of Lens
@@ -371,4 +372,10 @@ const Box = styled<ComponentType>(BoxFactory)`
   ${zIndex};
 `;
 
-export default Box;
+const ThemedBox: ComponentType = props => (
+  <ThemeProvider theme={theme}>
+    <Box {...props} />
+  </ThemeProvider>
+);
+
+export default ThemedBox;
