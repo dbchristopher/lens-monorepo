@@ -56,7 +56,7 @@ const Card: StyledCardComponentType = styled<CardComponentType>(CardFactory)`
   }
 `;
 
-export default (props: any) => (
+export default (props: CardProps) => (
   <ThemeProvider theme={theme}>
     <Card {...props} />
   </ThemeProvider>
